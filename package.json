@@ -1,0 +1,30 @@
+{
+    "name": "user_service",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "beautiful": "yarn prettier --write .",
+        "build": "babel lib -d dist",
+        "start": "nodemon --exec babel-node lib/index.js",
+        "serve": "yarn build && node dist/index.js",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.8",
+        "@babel/core": "^7.14.8",
+        "@babel/node": "^7.14.9",
+        "@babel/preset-env": "^7.14.9",
+        "@babel/preset-typescript": "^7.14.5",
+        "eslint": "^7.32.0",
+        "husky": "^7.0.0",
+        "jest": "^27.0.6",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.12",
+        "prettier": "^2.3.2"
+    }
+}
